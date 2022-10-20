@@ -48,10 +48,10 @@ function Main(props) {
       </section>
       <section className="places">
         <ul className="content">
-          {cards.map((data) =>
+          {cards.map((data) => (
             <Card link={data.link} name={data.name} likes={data.likes}
-            onCardClick={props.onCardClick} key={data._id}/>)}
-
+            onCardClick={props.onCardClick} key={data._id}/>
+          ))}
         </ul>
       </section>
     </main>

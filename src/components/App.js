@@ -39,7 +39,6 @@ function App() {
   };
 
   return (
-    // <CurrentUserContext.Provider value = {currentUser}>
     <div className="page">
       <Header />
       <Main
@@ -50,7 +49,7 @@ function App() {
       />
       <Footer />
 
-      <PopupWithForm name="person" title="Редактировать профиль"
+      <PopupWithForm name="person" title="Редактировать профиль" buttonText="Сохранить"
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}>
           <label className="popup__label">
@@ -63,11 +62,9 @@ function App() {
                      defaultValue="" placeholder="О себе" minLength="2" maxLength="200" required autoComplete="off" />
               <span id="profession-error" className="error about-error"></span>
           </label>
-          <button id="popup-button-person" className="popup__button" type="submit"
-                  aria-label="Сохранить изменения">Сохранить</button>
       </PopupWithForm>
 
-      <PopupWithForm name="card" title="Новое место"
+      <PopupWithForm name="card" title="Новое место" buttonText="Создать"
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}>
           <label className="popup__label">
@@ -80,11 +77,9 @@ function App() {
                      placeholder="Ссылка на картинку" required autoComplete="off" />
               <span id="link-error" className="error link-error"></span>
           </label>
-          <button id="popup-button-place" className="popup__button popup__button_invalid" type="submit"
-                  aria-label="Создать карточку">Создать</button>
           </PopupWithForm>
 
-      <PopupWithForm name="avatar" title="Обновить аватар"
+      <PopupWithForm name="avatar" title="Обновить аватар" buttonText="Сохранить"
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}>
           <label className="popup__label">
@@ -93,8 +88,6 @@ function App() {
                      autoComplete="off" />
               <span id="avatar-error" className="error avatar-error"></span>
           </label>
-          <button id="popup-button-avatar" className="popup__button popup__button_invalid" type="submit"
-                  aria-label="Сохранить изменения">Сохранить</button>
       </PopupWithForm>
 
       <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
