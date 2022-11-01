@@ -7,6 +7,7 @@
 @import url('./blocks/card/__icon-like/card__icon-like.css');
 @import url('./blocks/card/__icon-like/_active/card__icon-like_active.css');
 @import url('./blocks/card/__icon-delete/card__icon-delete.css');
+@import url('./blocks/card/__icon-delete/_inactive/card__icon-delete_inactive.css');
 @import url('./blocks/card/__info/card__info.css');
 @import url('./blocks/card/__place/card__place.css');
 @import url('./blocks/card/__title/card__title.css');
