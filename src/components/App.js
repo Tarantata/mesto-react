@@ -30,7 +30,6 @@ function App() {
         })
         .catch((err) => console.error(err))
     }, []);
-
   /* массив объектов карточек с сервера */
     useEffect(() => {
       api
@@ -39,7 +38,6 @@ function App() {
           setCards(data);
         })
         .catch(err => console.error(err))
-        // .finally(() => setIsLoading(false));
     }, []);
 
   /* отправка карточки на сервер */
