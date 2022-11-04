@@ -12,9 +12,12 @@ function AddPlacePopup(props) {
   function handleSubmit(evt) {
   evt.preventDefault();
   props.onAddPlace({name: name, link: link});
+  }
+
+  React.useEffect(() => {
     setName('');
     setLink('');
-  }
+  }, [props.isOpen])
 
   return (
     <PopupWithForm name="card" title="Новое место" buttonText="Создать"
@@ -22,7 +25,7 @@ function AddPlacePopup(props) {
       onClose={props.onClose}
       onSubmit={handleSubmit}>
       <label className="popup__label">
-        <input onChange={handleChangePlace} type="text" className="form__input popup__input popup__input_place-name" name="name" /*defaultValue=""*/ placeholder="Название" minLength="2" maxLength="30" required autoComplete="off" value={name} />
+        <input onChange={handleChangePlace} type="text" className="form__input popup__input popup__input_place-name" name="name" placeholder="Название" minLength="2" maxLength="30" required autoComplete="off" value={name} />
         <span id="name-error" className="error name-error">Необходимо заполнить данное поле</span>
       </label>
       <label className="popup__label">

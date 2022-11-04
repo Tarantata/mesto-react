@@ -1,5 +1,4 @@
-import React from "react";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import Main from "./Main.js";
@@ -79,8 +78,7 @@ function App() {
         .deleteCard(card._id)
         .then(() => {
           setIsLoading(!isLoading);
-          const newCard = cards.filter((item) => item._id !== card._id);
-          setCards(newCard);
+          setCards(prevState => prevState.filter((item) => item._id !== card._id));
         })
         .catch((err) => console.error(err))
         .finally(() => setIsLoading(false));
