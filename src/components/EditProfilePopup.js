@@ -31,12 +31,11 @@ function EditProfilePopup(props) {
       onClose={props.onClose}
       onSubmit={handleSubmit}>
       <label className="popup__label">
-        <input onChange={handleChangeName} type="text" className="form__input popup__input popup__input_person-name" name="name" defaultValue={currentUser.name} placeholder="Имя" minLength="2" maxLength="40" required autoComplete="off"/>
+        <input onChange={handleChangeName} type="text" className="form__input popup__input popup__input_person-name" name="name" value={name} placeholder="Имя" minLength="2" maxLength="40" required autoComplete="off"/>
         <span id="person-error" className="error name-error">Необходимо заполнить данное поле</span>
       </label>
       <label className="popup__label">
-        <input onChange={handleChangeAbout} type="text" className="form__input popup__input popup__input_person-profession" name="about"
-        defaultValue={currentUser.about} placeholder="О себе" minLength="2" maxLength="200" required autoComplete="off"/>
+        <input onChange={handleChangeAbout} type="text" className="form__input popup__input popup__input_person-profession" name="about" value={about} placeholder="О себе" minLength="2" maxLength="200" required autoComplete="off"/>
         <span id="profession-error" className="error about-error">Необходимо заполнить данное поле</span>
       </label>
     </PopupWithForm>
