@@ -30,6 +30,7 @@ function App() {
         })
         .catch((err) => console.error(err))
     }, []);
+
   /* массив объектов карточек с сервера */
     useEffect(() => {
       api
