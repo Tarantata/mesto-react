@@ -1,7 +1,7 @@
 class Api{
   constructor(config) {
     this._url = config.url;
-    this._headers = config.headers
+    this._headers = config.headers;
   }
 
   _checkingInfo(res) {
@@ -77,4 +77,5 @@ export default new Api ({
       authorization: '81329a12-6862-4862-a5bb-784002a24ef0',
       'Content-Type': 'application/json'
     }
-})
+});
+
